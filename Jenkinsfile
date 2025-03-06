@@ -2,8 +2,8 @@ pipeline {
     agent any
     environment {
         
-        MAVEN_HOME = '/opt/apache-maven-3.9.8'
-        PATH = "${env.PATH}:${MAVEN_HOME}/bin"
+        MAVEN_ SAN= ' MAVEN_HOME'
+        PATH = 'PATH'
    }
     stages {
         stage('Clone Repository') {
