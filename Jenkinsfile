@@ -1,19 +1,26 @@
-pipeline {
+pipeline 
+{
     agent any
-    environment {
-        
-        MAVEN_ SAN= ' MAVEN_HOME'
-        PATH = 'PATH'
-   }
-    stages {
-        stage('Clone Repository') {
-            steps {  
-                sh 'git clone https://github.com/RavitejaAdepudi/javawar'
+    environment
+    {
+        MAVEN_HOME = /opt/apache-maven-3.9.8
+       PATH = $PATH:/opt/apache-maven-3.9.8/bin
+    }
+    
+    stages 
+    {
+        stage('1') 
+        {
+            steps 
+            {  
+                sh 'echo $MAVEN_HOME'
             }
         }
-        stage('Build with Maven') {
-            steps {
-                sh 'mvn -f /var/lib/jenkins/workspace/envvar/javawar/pom.xml install'
+        stage('2') 
+        {
+            steps
+            {
+                sh 'echo $PATH
             }
         }
     }
